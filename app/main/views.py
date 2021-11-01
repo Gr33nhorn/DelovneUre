@@ -5,3 +5,8 @@ from . import main
 def index():
 	print("JJJJJJJJJJJJJJJAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 	return render_template("index.html")
+
+@main.route('/mesec/<m>', methods=['GET', 'POST'])
+def mesec(m):
+	print("JANUAR")
+	return render_template("mesec.html", m=m)
