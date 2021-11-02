@@ -4,7 +4,7 @@
 	<h2>{{ m }}</h2>
 </div>
 
-<table class="table table-hover table-dark">
+<table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -18,8 +18,8 @@
   	{% for dan in dnevi %}
     <tr>
       <th scope="row">{{ dan.id }}</th>
-      <td>{{ dan.datum }}</td>
-      <td>{{ dan.zacetek }}</td>
+      <td>{{ moment(dan.datum).format('ll') }}</td>
+      <td>{{ moment(dan.zacetek).format('ll') }}</td>
       <td>{{ dan.konec }}</td>
       <td>{{ dan.stevilo_ur }}</td>
     </tr>
